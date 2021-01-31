@@ -1,0 +1,55 @@
+@import 'mixins';
+
+body {
+  background-color: rgb(255, 255, 255);
+  animation: body $normal linear;
+  @include scroll__animate;
+  // transition: ease-in-out all 1s;
+
+  #app {
+    max-width: 1500px;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin: auto;
+    .progress_bar {
+      top: 0;
+      left: 0;
+      position: fixed;
+      width: 4px;
+      background-color: rgb(74, 126, 216);
+      height: 0;
+      animation: scrollbar $normal linear;
+      @include scroll__animate;
+    }
+    main {
+      padding: 0 25px;
+    }
+    .home {
+      header, section {
+        h1, h2 {
+          opacity: 0;
+          color: rgb(19, 48, 97);
+        }
+      }
+      header, section, footer {
+        @include flex;
+      }
+      section, footer {
+        height: 60vh;
+      }
+      header {
+        height: 100vh;
+      }
+      footer {
+        h1, h2 {
+          opacity: 0;
+          color: white;
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,68 @@
+$normal: 1s;
+$slow: 1.5s;
+$slower: 2s;
+$super_slow: 3s;
+
+.fade_up {
+  transition: 1s all linear;
+  animation: fade_up $slower ease-in-out forwards;
+}
+.fade {
+  animation: fade $super_slow ease-in-out forwards;
+}
+
+.bg {
+  background-color: rgb(19, 48, 97);
+}
+
+@keyframes fade_up {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes body {
+  45% {
+    background-color: #fff;
+  }
+  52% {
+    background-color: rgb(19, 48, 97);
+  }
+  100% {
+    background-color: rgb(19, 48, 97);
+  }
+}
+
+@keyframes cube {
+  0% { 
+    // transform: scale(1);
+    // transform: rotateX(360deg) rotateZ(45deg) rotateY(-45deg);
+  }
+
+  100% {
+    transform: translateY(0px) rotateX(180deg) rotateZ(180deg) rotateY(-540deg);
+  }
+}
+
+@keyframes scrollbar {
+  to {
+    height: 100vh;
+    background-color: #fff;
+  }
+}

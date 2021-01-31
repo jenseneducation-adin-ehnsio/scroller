@@ -1,0 +1,56 @@
+.cube-wrap {
+    --size: 8rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    perspective: 100vmin;
+    opacity: calc(var(--scroll));
+    transition: transform .5s ease-in-out;
+  }
+  .cube {
+    transform-style: preserve-3d;
+    transform: translateY(-30vh);
+    animation: cube 1s linear;
+    @include scroll__animate;
+  }
+  .side {
+    @include flex_column;
+    text-transform: uppercase;
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    background-color: #fff;
+    backface-visibility: visible;
+    top: calc(var(--size) * -.5);
+    left: calc(var(--size) * -.5);
+  }
+  .top {
+    background-color: #fff;
+    transform: rotateX(90deg) translateZ(calc(var(--size) * .5));
+  }
+  .bottom {
+    background-color: #999;
+    transform: rotateX(90deg) translateZ(calc(var(--size) * -.5));
+  }
+  .left {
+    background-color: #ccc;
+    transform: rotateY(90deg) translateZ(calc(var(--size) * .5));
+  }
+  .right {
+    background-color: #ddd;
+    transform: rotateY(90deg) translateZ(calc(var(--size) * -.5));
+  }
+  .front {
+    background-color: #fff;
+    transform: translateZ(calc(var(--size) * .5));
+  }
+  .back {
+    background-color: #bbb;
+    transform: translateZ(calc(var(--size) * -.5));
+  }
+
+  .bigger {
+    transform: scale(1.2);
+  }
