@@ -1,3 +1,6 @@
+$super_fast: .3s;
+$faster: .5s;
+$fast: .7s;
 $normal: 1s;
 $slow: 1.5s;
 $slower: 2s;
@@ -8,7 +11,24 @@ $super_slow: 3s;
   animation: fade_up $slower ease-in-out forwards;
 }
 .fade {
-  animation: fade $super_slow ease-in-out forwards;
+  span:nth-child(1) {
+    animation: fade $faster ease-in-out forwards .3s;
+  }
+  span:nth-child(2) {
+    animation: fade $faster ease-in-out forwards .7s;
+  }
+  span:nth-child(3) {
+    animation: fade $faster ease-in-out forwards 1s;
+  }
+  span:nth-child(4) {
+    animation: fade $faster ease-in-out forwards;
+  }
+  span:nth-child(5) {
+    animation: fade $faster ease-in-out forwards .5s;
+  }
+  span:nth-child(6) {
+    animation: fade $faster ease-in-out forwards 1.2s;
+  }
 }
 
 .bg {

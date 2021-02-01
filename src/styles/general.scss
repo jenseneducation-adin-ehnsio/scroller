@@ -30,7 +30,6 @@ body {
     .home {
       header, section {
         h1, h2 {
-          opacity: 0;
           color: rgb(19, 48, 97);
         }
       }
@@ -39,13 +38,18 @@ body {
       }
       section, footer {
         height: 60vh;
+        h1, h2 {
+          opacity: 0;
+        }
       }
       header {
         height: 100vh;
+        span {
+          opacity: 0;
+        }
       }
       footer {
         h1, h2 {
-          opacity: 0;
           color: white;
         }
       }

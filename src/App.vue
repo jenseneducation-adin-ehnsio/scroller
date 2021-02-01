@@ -1,13 +1,13 @@
 <template>
   <div class="progress_bar"></div>
-  <div @click="animate" :class="{ bigger: cubeAnimate }" class="cube-wrap">
+  <div class="cube-wrap">
     <div class="cube">
-      <div class="side top"><h6>afonso</h6><h6>afonso</h6><h6>afonso</h6><h6>afonso</h6><h6>afonso</h6></div>
-      <div class="side bottom"><h6>afonso</h6><h6>afonso</h6><h6>afonso</h6><h6>afonso</h6><h6>afonso</h6></div>
-      <div class="side front"><h6>afonso</h6><h6>afonso</h6><h6>afonso</h6><h6>afonso</h6><h6>afonso</h6></div>
-      <div class="side back"><h6>afonso</h6><h6>afonso</h6><h6>afonso</h6><h6>afonso</h6><h6>afonso</h6></div>
-      <div class="side left"><h6>afonso</h6><h6>afonso</h6><h6>afonso</h6><h6>afonso</h6><h6>afonso</h6></div>
-      <div class="side right"><h6>afonso</h6><h6>afonso</h6><h6>afonso</h6><h6>afonso</h6><h6>afonso</h6></div>
+      <div class="side top"><h6>wazaaa</h6><h6>wazaaa</h6><h6>wazaaa</h6><h6>wazaaa</h6><h6>wazaaa</h6></div>
+      <div class="side bottom"><h6>wazaaa</h6><h6>wazaaa</h6><h6>wazaaa</h6><h6>wazaaa</h6><h6>wazaaa</h6></div>
+      <div class="side front"><h6>wazaaa</h6><h6>wazaaa</h6><h6>wazaaa</h6><h6>wazaaa</h6><h6>wazaaa</h6></div>
+      <div class="side back"><h6>wazaaa</h6><h6>wazaaa</h6><h6>wazaaa</h6><h6>wazaaa</h6><h6>wazaaa</h6></div>
+      <div class="side left"><h6>wazaaa</h6><h6>wazaaa</h6><h6>wazaaa</h6><h6>wazaaa</h6><h6>wazaaa</h6></div>
+      <div class="side right"><h6>wazaaa</h6><h6>wazaaa</h6><h6>wazaaa</h6><h6>wazaaa</h6><h6>wazaaa</h6></div>
     </div>
   </div>
   <router-view />
@@ -20,12 +20,6 @@
 export default {
   name: "App",
 
-  data() {
-    return {
-      cubeAnimate: false
-    }
-  },
-
   created() {
     document.body.style.setProperty('--scroll', 0);
     window.addEventListener('scroll', () => {
@@ -33,14 +27,7 @@ export default {
     }, false);
   },
 
-  methods: {
-    animate() {
-      this.cubeAnimate = true
-      setTimeout(() => {
-        this.cubeAnimate = false
-      }, 500);
-    }
-  },
+
 
 };
 </script>
